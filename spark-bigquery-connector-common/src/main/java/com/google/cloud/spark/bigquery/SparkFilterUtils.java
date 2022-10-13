@@ -51,7 +51,7 @@ public class SparkFilterUtils {
           pushAllFilters, filter, readDataFormat, fields, equalTo.attribute());
     }
     if (filter instanceof EqualNullSafe) {
-      EqualNullSafe equalNullSafe = (EqualNullSafe) fields;
+      EqualNullSafe equalNullSafe = (EqualNullSafe) filter;
       return isFilterWithNamedFieldHandled(
           pushAllFilters, filter, readDataFormat, fields, equalNullSafe.attribute());
     }
