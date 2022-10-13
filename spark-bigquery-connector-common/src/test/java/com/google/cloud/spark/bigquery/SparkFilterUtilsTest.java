@@ -167,7 +167,9 @@ public class SparkFilterUtilsTest {
   public void testNumericAndNullFilters() {
 
     assertThat(SparkFilterUtils.compileFilter(EqualTo.apply("foo", 1))).isEqualTo("`foo` = 1");
-    assertThat(SparkFilterUtils.compileFilter(EqualNullSafe.apply("foo", 1))).isEqualTo("`foo` IS NULL AND 1 IS NULL OR `foo` IS NOT NULL AND 1 IS NOT NULL AND `foo` = 1");
+    assertThat(SparkFilterUtils.compileFilter(EqualNullSafe.apply("foo", 1)))
+        .isEqualTo(
+            "`foo` IS NULL AND 1 IS NULL OR `foo` IS NOT NULL AND 1 IS NOT NULL AND `foo` = 1");
     assertThat(SparkFilterUtils.compileFilter(GreaterThan.apply("foo", 2))).isEqualTo("`foo` > 2");
     assertThat(SparkFilterUtils.compileFilter(GreaterThanOrEqual.apply("foo", 3)))
         .isEqualTo("`foo` >= 3");
