@@ -49,7 +49,7 @@
 
     <properties>
         <gpg.skip>true</gpg.skip>
-        <revision>0.0.1-SNAPSHOT</revision>
+        <revision>0.28.0.ngates</revision>
 
         <avro.version>1.11.1</avro.version>
         <arrow.version>9.0.0</arrow.version>
