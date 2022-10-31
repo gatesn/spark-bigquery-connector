@@ -3,7 +3,7 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>com.google.cloud.spark</groupId>
+    <groupId>com.github.gatesn</groupId>
     <artifactId>spark-bigquery-parent</artifactId>
     <version>${revision}</version>
     <relativePath>../../spark-bigquery-parent</relativePath>
